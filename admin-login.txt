@@ -1,0 +1,8 @@
+# Admin Login Credentials for Project
+Username: admin
+Password: Admin@123
+
+# Notes:
+# 1. Change password after first login
+# 2. Do NOT commit this file to public repository if sensitive
+# 3. Use .gitignore to prevent accidental push of credentials

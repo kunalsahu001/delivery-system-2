@@ -43,8 +43,5 @@ class User extends Authenticatable
     ];
 
 
-    public function enrollments()
-    {
-        return $this->hasMany(Enrollment::class);
-    }
+   
 }
