@@ -2,9 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
-use App\Http\Controllers\DeliveryPersonnelController;
-use App\Http\Controllers\OrderController;
-use App\Http\Controllers\AssignmentController;
+use App\Http\Controllers\CronAssignmentController;
 use App\Http\Controllers\DashboardController;
 
 /*
@@ -29,26 +27,6 @@ Route::middleware(['auth'])->group(function () {
     // Dashboard
     Route::get('/dashboard', [DashboardController::class, 'index'])
         ->name('dashboard.index');
-
-    // Orders CRUD
-    Route::resource('orders', OrderController::class);
-
-    // Assignments
-    Route::prefix('assignments')->group(function () {
-        // List all assignments
-        Route::get('/', [AssignmentController::class, 'index'])
-            ->name('assignments.index');
-
-        // Assign a specific order to personnel
-        Route::post('assign-order/{order}', [AssignmentController::class, 'assignOrder'])
-            ->name('assignments.assign');
-
-        // Mark an assignment as delivered
-        Route::post('{assignment}/delivered', [AssignmentController::class, 'markDelivered'])
-            ->name('assignments.delivered');
-    });
-
-    // Delivery Personnel
-    Route::get('/delivery-personnel', [DeliveryPersonnelController::class, 'index'])
-        ->name('delivery-personnel.index');
 });
+
+Route::get('/cron/assign-orders', [CronAssignmentController::class, 'assignOrders']);
