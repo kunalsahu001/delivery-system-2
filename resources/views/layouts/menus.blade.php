@@ -18,29 +18,7 @@
             </a>
          </li>
 
-         <!-- Orders -->
-         <li class="pe-slide">
-            <a href="{{ route('orders.index') }}" class="pe-nav-link">
-               <i class="bi bi-bag-check pe-nav-icon"></i>
-               <span class="pe-nav-content">Orders</span>
-            </a>
-         </li>
-
-         <!-- Assignments -->
-         <li class="pe-slide">
-            <a href="{{ route('assignments.index') }}" class="pe-nav-link">
-               <i class="bi bi-arrow-left-right pe-nav-icon"></i>
-               <span class="pe-nav-content">Assignments</span>
-            </a>
-         </li>
-
-         <!-- Delivery Personnel -->
-         <li class="pe-slide">
-            <a href="{{ route('delivery-personnel.index') }}" class="pe-nav-link">
-               <i class="bi bi-people pe-nav-icon"></i>
-               <span class="pe-nav-content">Delivery Personnel</span>
-            </a>
-         </li>
+         
 
          
       </ul>
